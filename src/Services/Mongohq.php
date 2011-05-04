@@ -183,7 +183,7 @@ class Mongohq
             // On success the MongoHQ API returns invalid
             // JSON and the text only OK
             if ($body == 'OK') {
-                return json_decode('"OK"');
+                return "OK";
             }
 
             return json_decode($http->getResponseBody());
